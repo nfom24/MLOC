@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <title>INVITACION</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap');
+
+:root {
+    --color-fondo: #E6F2FF;
+    --color-principal: #A0C4E2;
+    --color-secundario: #C7DAE8;
+    --color-texto: #4A6FA5;
+    --color-acento: #7AB8E3;
+    --color-texto-suave: #6E8CAA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.contenedor {
+    background-color: white;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(74, 111, 165, 0.2);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    animation: aparecer 1s ease-out;
+    padding-bottom: 20px;
+}
+
+/* Animaciones */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Título Principal */
+.contenedor > div:first-child h1 {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 15px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: aparecer 1.5s ease-out;
+}
+
+/* Imagen */
+.contenedor > div:nth-child(2) {
+    padding: 20px;
+}
+
+.contenedor > div:nth-child(2) img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--color-secundario);
+    animation: flotar 3s ease-in-out infinite;
+}
+
+/* Nombre de la Niña */
+.contenedor > div:nth-child(3) {
+    font-family: 'Dancing Script', cursive;
+    color: var(--color-texto);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 15px 0;
+    animation: aparecer 2s ease-out;
+}
+
+/* Contenedor de Padres y Padrinos */
+.contenedor > div:nth-child(4) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Sección de Padres y Padrinos */
+.papas, .padrinos {
+    background-color: var(--color-secundario);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 40%;
+    animation: aparecer 2.5s ease-out;
+    flex-grow: 1;
+}
+
+.papas h2, .padrinos h2 {
+    color: var(--color-texto);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.papas p, .padrinos p {
+    color: var(--color-texto-suave);
+}
+
+/* Detalles del Evento */
+.evento {
+    background-color: var(--color-fondo);
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    animation: aparecer 3s ease-out;
+}
+
+.evento p {
+    color: var(--color-texto);
+    margin: 5px 0;
+}
+
+.evento p span {
+    font-weight: 600;
+    color: var(--color-acento);
+}
+
+/* Mensaje Final */
+.mensaje {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 15px;
+    font-style: italic;
+    animation: aparecer 3.5s ease-out;
+}
+
+/* WhatsApp Float Button */
+.float-wa {
+  display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 20px;
+      }
+
+.float-wa:hover {
+    transform: scale(1.1);
+}
+
+/* Efectos de Hover */
+.papas:hover, .padrinos:hover, .evento:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(74, 111, 165, 0.1);
+}
+
+/* Media Query para dispositivos más pequeños */
+@media (max-width: 400px) {
+    .papas, .padrinos {
+        width: 90%;
+    }
+}
+    </style>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div>
+        <h1>MI BAUTIZO</h1>
+      </div>
+      <div>
+        <img src="madison.png" alt="niña" />
+      </div>
+      <div>Quiero invitarte a mi Bautizo en compañia de mis</div>
+      <div>
+        <!-- Parents Section -->
+        <div class="papas">
+          <h2>Papás</h2>
+          <p>Nelson Orejuela</p>
+          <p>Angela Castro</p>
+        </div>
+        <!-- Godparents Section -->
+        <div class="padrinos">
+          <h2>Padrinos</h2>
+          <p>Marlon S. Herrera</p>
+          <p>Carol A. Castro</p>
+        </div>
+        <!-- Event Details -->
+        <div class="evento">
+          <p><span>Día:</span> 07-12-2024</p>
+          <p><span>Lugar:</span> Iglesia La Sagrada Familia</p>
+          <p><span>Hora:</span> 5:00 pm</p>
+          <p><span>Recepcion:</span> Murano APT 960</p>
+          <p><span>Hora:</span> 6:30 pm</p>
+        </div>
+        <!-- Footer Decoration -->
+        <div class="mensaje">
+            <p>Gracias por acompañarnos en este día tan especial.</p>
+            <p><strong>confirma asistencia</strong></p>
+            
+            <!-- WhatsApp button now inside the mensaje div -->
+            <a
+              href="https://wa.me/573144029461?text="
+              class="float-wa"
+              target="_blank"
+            >
+              <i class="fa fa-whatsapp" style="margin-top: 16px"></i>
+            </a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
